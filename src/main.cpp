@@ -42,7 +42,7 @@
 
 extern "C" Q_DECL_EXPORT int kdemain(int argc, char **argv)
 {
-#ifndef Q_OS_WIN
+/*#ifndef Q_OS_WIN
     // Prohibit using sudo or kdesu (but allow using the root user directly)
     if (getuid() == 0) {
         if (!qEnvironmentVariableIsEmpty("SUDO_USER")) {
@@ -53,7 +53,7 @@ extern "C" Q_DECL_EXPORT int kdemain(int argc, char **argv)
             return EXIT_FAILURE;
         }
     }
-#endif
+#endif*/
 
     QApplication app(argc, argv);
     app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
